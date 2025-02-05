@@ -3,7 +3,7 @@
 Access control layer designed with laravel 11 for admin panel like fillament and spatie whereas all the admin panel facilities like user managemnet, menu management, and role management are available.
 ## Project Details
 
-- **GitHub Repository**: [https://github.com/shohag-cse-knu/acl.git](https://github.com/shohag-cse-knu/acl.git)
+- **GitHub Repository**: [https://github.com/shohag-cse-knu/AccessControlLayer.git](https://github.com/shohag-cse-knu/AccessControlLayer.git)
 
 ## Features
 
