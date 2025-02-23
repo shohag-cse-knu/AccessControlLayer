@@ -13,13 +13,12 @@ function dateDifferences($date1, $date2)
     return $diff->format("%a");
 }
 
-function value_to_index($ref_result = array(), $key_val){
+function value_to_index($key_val, $ref_result = array()) {
     $arr = array();
     foreach ($ref_result as $key => $item) {            
-                $arr[$item->$key_val][] = $item;
+        $arr[$item->$key_val][] = $item;
     }
-    $ref_result = $arr;
-    return $ref_result;
+    return $arr;
 }
 
 function create_list($arr, $urutan){
