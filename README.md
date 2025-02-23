@@ -54,7 +54,7 @@ npm install --save-dev vite laravel-vite-plugin
 ````
 ### 7. Run NPM
 ```bash
-npm irun build
+npm run build
 ````
 ### 8. Run 
 ```bash
