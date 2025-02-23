@@ -18,7 +18,7 @@ Access control layer designed with laravel 11 for admin panel like fillament and
 
 ## Prerequisites
 
-- **Laravel**: The minimum Laravel version required for Livewire is Laravel 11.x.
+- **Laravel**: The minimum Laravel version required for ACL is Laravel 11.x.
 - **PHP**: Livewire requires PHP version 8.2 or higher.
 - **Composer**: Since Laravel is installed via Composer, make sure you have Composer installed on your system.
 - **JavaScript Dependencies (NPM)**: You need to have Node.js and npm installed to manage the front-end assets.
