@@ -1,7 +1,6 @@
 version: '3.8'
 
 services:
-  # PHP Service
   app:
     build:
       context: .
@@ -32,8 +31,7 @@ services:
       - app
     networks:
       - app-network
-
-  # MySQL Service
+      
   db:
     image: mysql:8.0
     container_name: laravel_db
@@ -41,10 +39,21 @@ services:
     environment:
       MYSQL_DATABASE: acl
       MYSQL_ROOT_PASSWORD: root
-    volumes:
-      - dbdata:/var/lib/mysql
     ports:
-      - "3306:3306"
+      - "3307:3306"  # Change this line to match the new port
+    networks:
+      - app-network
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    restart: unless-stopped
+    ports:
+      - "8080:80"  # Expose phpMyAdmin on port 8080
+    environment:
+      PMA_HOST: db
+      PMA_USER: root
+      PMA_PASSWORD: root
     networks:
       - app-network
 
@@ -56,4 +65,3 @@ volumes:
   vendor:
   node_modules:
   dbdata:
-    driver: local 

@@ -101,7 +101,7 @@ class AppServiceProvider extends ServiceProvider
                                 })
                                 ->get();
                 
-                $actions = value_to_index($result, "menu_key");
+                $actions = value_to_index("menu_key", $result);
                 $view->with('actions', $actions);
             }
         });

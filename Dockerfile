@@ -45,8 +45,9 @@ RUN chown -R www-data:www-data . \
 USER www-data
 
 # Install dependencies
-RUN npm install
+RUN npm install --save-dev vite laravel-vite-plugin
 RUN composer install --no-scripts
+
 
 # Copy the rest of the application
 COPY --chown=www-data:www-data . .
