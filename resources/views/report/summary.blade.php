@@ -55,6 +55,7 @@
                     </div>
                     <hr class="col-md-12">
                     <form id="form" action="{{ route('summary')}}" method="post" role="form">
+                        @csrf
                         <div class="row">
                             <div class="col-md-6">                                
                                 <div class="form-group">

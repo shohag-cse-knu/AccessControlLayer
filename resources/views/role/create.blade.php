@@ -50,6 +50,7 @@
                         <div class="col-sm-12">
                             <!-- Basic Form Inputs card start -->
                             <form method="POST" action="{{ route('role.store') }}">
+                                @csrf
                                 <div class="card">
                                     <div class="card-block">
                                         <h4 class="sub-title">Basic Inputs</h4>

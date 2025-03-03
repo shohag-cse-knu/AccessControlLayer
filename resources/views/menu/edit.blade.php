@@ -55,6 +55,7 @@
                             <!-- Basic Form Inputs card start -->
                             <form id="form" method="POST" action="{{ route('menu.update', $menuInfo->id)}}">
                                 @method('PUT')
+                                @csrf
                                 <div class="card">
                                     <div class="card-block">
                                         <h4 class="sub-title">Basic Inputs</h4>

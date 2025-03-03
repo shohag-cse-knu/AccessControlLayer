@@ -50,6 +50,7 @@
                             <!-- Basic Form Inputs card start -->
                             <form method="POST" action="{{ route('role.update', $roleInfo->id)}}">
                                 @method('PUT') <!-- Specifies the HTTP method as PUT -->
+                                @csrf
                                 <div class="card">
                                     <div class="card-block">
                                         <h4 class="sub-title">Basic Inputs</h4>
