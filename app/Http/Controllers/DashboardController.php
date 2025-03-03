@@ -12,6 +12,8 @@ use Illuminate\Http\RedirectResponse;
 
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
+use Illuminate\Support\Facades\Redis;
+use App\Jobs\SendEmailJob;
 
 class DashboardController extends Controller
 {
@@ -25,6 +27,14 @@ class DashboardController extends Controller
 	{
 		$GLOBALS['pageTitle'] = config('app.name')." : Dashboard";
 		$data = array();
+
+		//Redis::set('key', 'Hello from Laravel');
+		//$value = Redis::get('key');
+		//echo $value;
+
+		// Dispatch the job to the queue
+        SendEmailJob::dispatch("syfur.srs@gmail.com");
+		
 		return view('dashboard', $data);
 	}
 }
